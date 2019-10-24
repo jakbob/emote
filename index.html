@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Emote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body { 
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        background: hsl(220, 100%, 65%); 
+        color: #fff;
+      }
+      .emoji { 
+        position: absolute;
+        top: 0; 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        text-align: center;
+        font-size: 60vmin;
+        background: transparent;
+      }
+      .help-text {
+        font-family: sans-serif;
+        font-size: 8vw;
+        padding: 2vw;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 1s;
+      }
+      .emoji:valid + .help-text {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="emoji" required minlength="1" />
+    <div class="help-text">Välj en emoji som bäst representerar din känsla</div>
+  </body>
+</html>
