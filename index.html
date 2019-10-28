@@ -3,6 +3,7 @@
     <title>Emote</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Ett verktyg för att dela med sig av sina känslor i ett team eller en grupp." />
     <style>
       body {
         padding: 0;
@@ -10,6 +11,7 @@
         height: 100%;
         background: hsl(215, 90%, 80%);
         color: #fff;
+        font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
       .emoji {
         position: absolute;
@@ -25,7 +27,6 @@
         vertical-align: middle;
       }
       .help-text {
-        font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 8vw;
         padding: 2vw;
         text-align: center;
@@ -34,6 +35,19 @@
       }
       .emoji:valid + .help-text {
         opacity: 0;
+      }
+
+      .author {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #555;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .author a {
+        color: inherit;
       }
     </style>
     <script>
@@ -51,5 +65,6 @@
   <body>
     <input class="emoji" type="text" required minlength="1" />
     <div class="help-text">Välj en emoji som bäst representerar din känsla</div>
+    <div class="author">Skapat av <a href="https://twitter.com/jakbob" target="_blank">Jakob Florell</a>, 2019</div>
   </body>
 </html>
