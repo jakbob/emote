@@ -1,7 +1,7 @@
 <html lang="sv">
   <head>
     <title>Emote</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="description" content="Ett verktyg för att dela med sig av sina känslor i ett team eller en grupp." />
     <style>
@@ -26,27 +26,29 @@
         border: none;
         vertical-align: middle;
       }
+      .emoji:valid ~ .text {
+        opacity: 0;
+      }
+
+      .text {
+        opacity: 1;
+        transition: opacity 1s;
+      }
       .help-text {
         font-size: 8vw;
         padding: 2vw;
         text-align: center;
-        opacity: 1;
-        transition: opacity 1s;
       }
-      .emoji:valid + .help-text {
-        opacity: 0;
-      }
-
-      .author {
+      .author-text {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         color: #555;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: center;
       }
-      .author a {
+      .author-text a {
         color: inherit;
       }
     </style>
@@ -64,7 +66,7 @@
   </head>
   <body>
     <input class="emoji" type="text" required minlength="1" />
-    <div class="help-text">Välj en emoji som bäst representerar din känsla</div>
-    <div class="author">Skapat av <a href="https://twitter.com/jakbob" target="_blank">Jakob Florell</a>, 2019</div>
+    <div class="text help-text">Välj en emoji att visa upp</div>
+    <div class="text author-text">Skapat av <a href="https://twitter.com/jakbob" target="_blank">Jakob Florell</a>, 2019</div>
   </body>
 </html>
