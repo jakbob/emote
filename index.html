@@ -54,12 +54,10 @@
     </style>
     <script>
       window.addEventListener('mousedown', e => {
-        e.preventDefault();
         const input = document.querySelector('input');
         if (document.activeElement === input) {
           input.blur();
-        } else {
-          input.focus();
+          e.preventDefault();
         }
       });
     </script>
